@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+<!-- id 指定MapperStatement 对象的唯一标识 -->
+<!-- 对象参数绑定：使用的是OGNL -->
+<select id="findUserById" parameterType="int" resultType="po.User">
+select * from user where id =#{id}
+</select>
+</mapper>
